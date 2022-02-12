@@ -34,10 +34,8 @@ pipeline {
     }
     stage("Create docker image"){
         steps{
-            sh "docker build -t devops ."
+            sh 'docker build -t devops .'
         }
     }
 }
 }
-
-
