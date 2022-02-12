@@ -32,6 +32,11 @@ pipeline {
             echo "Deployment"
         }
     }
+    stage("Install Docke"){
+        steps{
+            sh 'yum install docker -y'
+        }
+    }
     stage("Create docker image"){
         steps{
             sh 'docker build -t devops .'
